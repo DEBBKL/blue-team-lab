@@ -57,8 +57,8 @@ alert tcp any any -> 192.168.1.0/24 80 (msg:"ALERTA: Tráfico HTTP entrante dete
 
 **📸 Capturas de pantalla**
 
-![local.rules con reglas](.imgs/1.PNG)
-![local.rules con reglas](./2.PNG)
+![local.rules con reglas](imgs/1.PNG)
+![local.rules con reglas](imgs/2.PNG)
 
 ### ▶️ Comprobación de funcionamiento
 
@@ -131,7 +131,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y
 sudo apt install fail2ban openssh-server
 ```
 
-![local.rules con reglas](./4.PNG)
+![local.rules con reglas](imgs/4.PNG)
 
 - 3. Activar y verificar el servicio SSH
 
@@ -157,7 +157,7 @@ bantime = 900
 findtime = 600
 ```
 
-![local.rules con reglas](./5.PNG)
+![local.rules con reglas](imgs/5.PNG)
 
 - 5. Reiniciar Fail2Ban
    
@@ -165,7 +165,7 @@ findtime = 600
 sudo systemctl restart fail2ban
 ```
 
-![local.rules con reglas](.imgs//6.PNG)
+![local.rules con reglas](imgs//6.PNG)
 
 
 - 6. Ver estado del servicio.
@@ -174,7 +174,7 @@ sudo systemctl restart fail2ban
 sudo fail2ban-client status sshd
 ```
 
-![local.rules con reglas](./7.PNG)
+![local.rules con reglas](imgs/7.PNG)
 
 ---
 
@@ -186,17 +186,19 @@ Desde Kali Linux:
 hydra -l kali -P /usr/share/wordlists/rockyou.txt ssh://10.0.2.6
 ```
 
+![local.rules con reglas](imgs/11.PNG)
+
 Ver en Ubuntu si la IP fue bloqueada:
 
 ```bash
 sudo fail2ban-client status sshd
 ```
+![local.rules con reglas](imgs/14.PNG)
 
 ## 📸 Capturas de pantalla
 
-- Archivo: jail.local.
-- Resultado del comando: fail2ban-client status sshd con la IP bloqueada.
-- Registro en: /var/log/fail2ban.log.
+![local.rules con reglas](imgs/15.PNG)
+![local.rules con reglas](imgs/16.PNG)
 
 ---
 
