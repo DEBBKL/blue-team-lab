@@ -56,8 +56,9 @@ alert ip any any -> 192.168.1.0/24 any (msg:"ALERTA: Posible ataque de flood det
 alert tcp any any -> 192.168.1.0/24 80 (msg:"ALERTA: Tráfico HTTP entrante detectado"; sid:1000002;)
 
 **📸 Capturas de pantalla**
-- local.rules antes y después de añadir las reglas.
-- Terminal mostrando alertas generadas por Snort.
+
+![local.rules con reglas](.imgs/1.PNG)
+![local.rules con reglas](./2.PNG)
 
 ### ▶️ Comprobación de funcionamiento
 
@@ -103,8 +104,7 @@ Ruta: Registros de Windows > Sistema
 
 ### 📸 Capturas de pantalla
 
-- Un evento por cada tipo (información, error, crítico, advertencia).
-- Descripción completa de cada evento.
+![local.rules con reglas](./3.PNG)
 
 ---
 
@@ -131,6 +131,8 @@ sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y
 sudo apt install fail2ban openssh-server
 ```
 
+![local.rules con reglas](./4.PNG)
+
 - 3. Activar y verificar el servicio SSH
 
 ```bash
@@ -155,17 +157,24 @@ bantime = 900
 findtime = 600
 ```
 
+![local.rules con reglas](./5.PNG)
+
 - 5. Reiniciar Fail2Ban
    
 ```bash
 sudo systemctl restart fail2ban
 ```
 
+![local.rules con reglas](.imgs//6.PNG)
+
+
 - 6. Ver estado del servicio.
 
 ```bash
 sudo fail2ban-client status sshd
 ```
+
+![local.rules con reglas](./7.PNG)
 
 ---
 
