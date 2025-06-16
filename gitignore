@@ -1,0 +1,33 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.log.*
+
+# Archivos de backup
+*.bak
+*.tmp
+*~
+
+# Archivos del sistema operativo
+ehthumbs.db
+Icon?
+desktop.ini
+
+# Archivos de usuario y sesiones de editores
+*.swp
+*.swo
+*.swn
+*.kate-swp
+
+# Archivos de VSCode
+.vscode/
+
+# Archivos de PyCharm / JetBrains
+.idea/
+
+# Archivos de pruebas
+*.pcap
+*.dump
